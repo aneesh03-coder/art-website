@@ -1,0 +1,143 @@
+
+
+    .menu{
+        @apply absolute lg:static lg:bg-transparent bg-gray-800 w-[120%] lg:w-[58%] xl:w-[64%]  text-center top-[120%] left-[-10%]   z-50 lg:text-base lg:font-semibold lg:flex uppercase rounded-b-3xl lg:p-0 justify-center ;
+       }
+    .menuItem{
+        @apply mx-0 xl:mx-2 hover:text-orange-100 my-3 font-bold lg:my-0 text-sm lg:text-sm p-3 border-b-[0.5px] lg:border-0 border-gray-300 relative lg:w-32 lg:flex-col justify-center  xl:text-base hover:transition hover:ease-in-out hover:duration-700 hover:-translate-y-[10px];
+  }
+ 
+
+    @media screen and (max-width: 1024px){
+      .menu{
+        clip-path: circle(0px at 90% -30%); 
+        -webkit-clip-path:circle(0px at 90% -30%);
+        transition: all 1s ease-in;  
+      }
+      .open{      
+        clip-path: circle(1200px at 90% -10%);
+        -webkit-clip-path: circle(1200px at 90% -10%);      
+      }
+      .menu_open li{
+        opacity: 0;
+        animation: fadeIn ease-in-out 750ms forwards;
+        }   
+
+      .menu_open li:nth-child(1){animation-delay: 0;}
+      .menu_open li:nth-child(2){animation-delay: 100ms;}
+      .menu_open li:nth-child(3){animation-delay: 200ms;}
+      .menu_open li:nth-child(4){animation-delay: 300ms;}
+      .menu_open li:nth-child(5){animation-delay: 400ms;}
+
+      .menu_closed li{
+        opacity: 1;
+        animation: fadeOut ease-in-out 750ms forwards;        
+      } 
+
+      .menu_closed li:nth-child(5){animation-delay: 50ms;}
+      .menu_closed li:nth-child(4){animation-delay: 100ms;}
+      .menu_closed li:nth-child(3){animation-delay: 200ms;}
+      .menu_closed li:nth-child(2){animation-delay: 300ms;}
+      .menu_closed li:nth-child(1){animation-delay: 400ms;}
+
+      .menu_open1{
+        opacity:0;
+        animation:fadeIn ease-out 750ms forwards;
+        animation-delay: 500ms;
+      }
+      .menu_closed1{
+        opacity:1;
+        animation:fadeOut ease-out 750ms forwards;        
+      }
+      .menu_open2{
+        opacity:0;
+        animation:fadeIn ease-out 750ms forwards;
+        animation-delay: 600ms;
+      }
+      .menu_closed2{
+        opacity:1;
+        animation:fadeOut ease-out 750ms forwards;        
+      }
+    
+
+      @keyframes fadeIn {
+        0%{opacity:0;      transform:translateX(400px);}
+        85%{opacity:0.2;}
+        100%{opacity:100;  transform:translateX(0%); }
+      }
+      @keyframes fadeOut {
+        0%{opacity:1;      transform:translateX(0%);}
+        35%{opacity:0.2;}       
+        100%{opacity:0;  transform:translateX(300px)}
+      }
+      .menuItem_sub_div{
+        transition: all .25s ease-in-out;
+        
+      } 
+      .menuItem_sub_div:hover{
+        transform:translateY(-5px)
+      }
+    
+    }
+    @media screen and (max-width: 640px){      
+      .open{      
+        clip-path: circle(800px at 90% -10%);
+        -webkit-clip-path: circle(800px at 90% -10%);      
+      }
+    }  
+    
+
+
+
+
+
+  
+  .submenu{
+      @apply text-white text-xs bg-slate-700 rounded-2xl px-16  lg:px-0 top-0 z-20 lg:absolute  lg:top-[92%] lg:left-[-50%] lg:rounded-xl lg:w-64 overflow-hidden h-0 transition-all ease-in-out duration-1000 lg:duration-700 lg:ease-out ;
+  }
+  .submenu_active{
+    @apply h-[125px] mt-2;
+  }
+  .submenu__items{
+      @apply my-2 pt-2 pb-2 border-b-[0.5px] border-gray-500 hover:text-orange-100  transition ease-in-out hover:-translate-y-1 hover:scale-105 m-2  duration-500  last:border-0
+  }
+  .pointers{
+    @apply w-[100%] h-2 absolute top-[80%] left-[0%] rounded-xl 
+  }
+ 
+
+  .auth{
+      @apply hidden lg:text-base lg:font-semibold uppercase lg:flex justify-end
+  }
+  .auth1{
+    @apply   lg:hidden w-full  flex justify-center
+}
+
+  .btn{
+    @apply rounded-xl py-2 xl:py-1 px-3 uppercase text-sm lg:text-xs font-bold cursor-pointer mx-2 my-5 xl:mx-5  text-orange-100 lg:w-[82px] text-center xl:text-sm xl:w-[95px] tracking-wider h-10   lg:h-9 border-orange-100 border-2 hover:text-black hover:bg-orange-100 hover:shadow-inner w-2/5  hover:transition hover:transform hover:duration-1000 hover:-translate-y-1 
+  }
+
+  .burgerMenu{
+    @apply lg:hidden cursor-pointer 
+  }
+
+  .burgerLines{
+      @apply w-8 border-2 mb-[6px] border-orange-100 rounded-sm 
+  }
+
+  .burgerLine2a{
+    @apply absolute -top-5 left-0 w-8 mt-[10px] border-2  border-orange-100 rounded-sm 
+  }
+  .burgerLine2b{
+    @apply absolute -top-5 left-0 w-8 mt-[10px] border-2  border-orange-100 rounded-sm 
+  }
+
+  .cancel1{
+      @apply transition duration-1000 ease-in-out transform rotate-45
+  }
+  .cancel2{
+    @apply transition duration-700 ease-in-out transform -rotate-45
+}
+.burgerAnimation{
+    @apply transition duration-1000 ease-in-out transform rotate-180
+}
